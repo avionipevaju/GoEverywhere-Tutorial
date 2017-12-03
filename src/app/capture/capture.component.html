@@ -1,10 +1,12 @@
-<div id="component">
 <h4 class="text-center">50 Kyu Problems</h4>
-<p> You can click on the board and take the opponent's stones.
+<p id="instructions"> You can click on the board and take the opponent's stones.
 
   If you see the word failed, just "retry" until you get the success message below the board.
 
   Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. </p>
-<div id="board"></div>
-  <button (click)="resetBoard()" class="btn btn-primary">Reset Board</button>
+  <div id="control" class="text-right">
+    <button (click)="resetBoard()" id="resetBtn" class="btn btn-primary">Reset Board</button>
+  </div>
+
+  <div id="board">
 </div>

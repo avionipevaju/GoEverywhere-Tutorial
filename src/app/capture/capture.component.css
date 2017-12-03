@@ -1,8 +1,19 @@
 #board{
   margin:auto;
   width: 40%;
+  padding-bottom: 3em;
 }
 
-#component{
-  background: #c5c9d6;
+h4{
+  margin-top:1em;
+}
+
+#control{
+  margin:auto;
+  margin-right: 10em;
+  margin-bottom: 2em;
+}
+
+#instructions{
+  padding:1em;
 }
