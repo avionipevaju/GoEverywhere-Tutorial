@@ -13,8 +13,9 @@ export class CaptureComponent implements OnInit {
 
   ngOnInit() {
     const board = new WGo.Board(document.getElementById('board'), {
-      width: 440,
-      size: 8,
+      width: 340,
+      size: 9,
+      background: 'assets/wood6.jpg'
     });
   }
 
