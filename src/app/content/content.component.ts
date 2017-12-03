@@ -15,5 +15,4 @@ export class ContentComponent implements OnInit {
   change(path) {
     this.router.navigate([path]);
   }
-
   }
