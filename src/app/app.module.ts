@@ -5,16 +5,19 @@ import { RouterModule, Routes} from '@angular/router';
 import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { IntroductionComponent } from './introduction/introduction.component';
+import { CaptureComponent } from './capture/capture.component';
 
 const appRoutes: Routes = [
-  {path: '', component: IntroductionComponent},
+  {path: '', component: IntroductionComponent, pathMatch: 'full'},
+  {path: 'capture', component: CaptureComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentComponent,
-    IntroductionComponent
+    IntroductionComponent,
+    CaptureComponent
   ],
   imports: [
     BrowserModule,
