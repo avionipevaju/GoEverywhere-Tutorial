@@ -79,7 +79,7 @@ export class CaptureStonesComponent implements OnInit {
     });
   }
 
-  initBoard2(){
+  initBoard2() {
 
     this.board2.addObject({
       x: 4,
@@ -112,7 +112,7 @@ export class CaptureStonesComponent implements OnInit {
     });
   }
 
-  initBoard3(){
+  initBoard3() {
 
     this.board3.addObject({
       x: 4,
@@ -139,7 +139,7 @@ export class CaptureStonesComponent implements OnInit {
     });
   }
 
-  initBoard4(){
+  initBoard4() {
 
     this.board4.addObject({
       x: 4,
