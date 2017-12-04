@@ -15,3 +15,12 @@ h4{
 #instructions{
   padding:1em;
 }
+
+#instructionText{
+  padding-left: 1em;
+}
+
+
+#level{
+  font-size: 3em;
+}
