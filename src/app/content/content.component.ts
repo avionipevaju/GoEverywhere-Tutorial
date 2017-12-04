@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
+declare var $: any;
 
 @Component({
   selector: 'app-content',
@@ -15,4 +16,8 @@ export class ContentComponent implements OnInit {
   change(path) {
     this.router.navigate([path]);
   }
+  toggle(event) {
+    $('#' + event.target.id + 'List').slideToggle();
+  }
+
   }

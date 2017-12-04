@@ -1,5 +1,5 @@
-<h5>Basic rules and how to capture stones</h5>
-<ul class="text-left" id="list">
+<h5><a (click)="toggle($event)" id="basic" [routerLink]="">Basic rules and how to capture stones</a></h5>
+<ul class="text-left" id="basicList">
   <li>
     <a [routerLink]="" (click)='change("")'>Introduction</a>
   <li>
@@ -26,8 +26,8 @@
     <a [routerLink]="" (click)='change("")'>46 Kyu Problems</a> - Think Twice
   </li>
 </ul>
-<h5>More about capturing stones</h5>
-<ul>
+<h5><a (click)="toggle($event)" id="more" [routerLink]="">More about capturing stones</a></h5>
+<ul id="moreList">
   <li>
     <a [routerLink]="" (click)='change("")'>45 Kyu Problems</a>
     - Learning the Ladder
@@ -58,8 +58,8 @@
     <a [routerLink]="" (click)='change("")'>37 Kyu Problems</a>
 </li>
 </ul>
-<h5>How a game is progressed</h5>
-<ul>
+<h5><a (click)="toggle($event)" id="progressed" [routerLink]="">How a game is progressed</a></h5>
+<ul id="progressedList">
   <li>
     <a [routerLink]="" (click)='change("")'>The beginning</a>
     - How a game is started
@@ -93,8 +93,8 @@
     <a [routerLink]="" (click)='change("")'>Komi</a> - A little bonus for white
 </li>
 </ul>
-<h5>Preparing for the real game</h5>
-<ul>
+<h5><a (click)="toggle($event)" id="real" [routerLink]="">Preparing for the real game</a></h5>
+<ul id="realList">
   <li>
     <a [routerLink]="" (click)='change("")'>A slap in the face</a>
   <li>

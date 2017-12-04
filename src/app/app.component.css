@@ -3,6 +3,11 @@
   background: #b5b7b1;
 }
 
+.pre-scrollable {
+  min-height: 45em;
+  overflow-y: scroll;
+}
+
 h1{
   padding-top: 1em;
 }
