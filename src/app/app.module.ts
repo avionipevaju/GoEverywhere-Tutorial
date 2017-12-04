@@ -6,10 +6,14 @@ import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { CaptureComponent } from './capture/capture.component';
+import { CaptureStonesComponent } from './capture-stones/capture-stones.component';
+import { IllegalMovesComponent } from './illegal-moves/illegal-moves.component';
 
 const appRoutes: Routes = [
   {path: '', component: IntroductionComponent, pathMatch: 'full'},
-  {path: 'capture', component: CaptureComponent}
+  {path: 'capture', component: CaptureComponent},
+  {path: 'capture-stones', component: CaptureStonesComponent},
+  {path: 'illegal-moves', component: IllegalMovesComponent}
 ];
 
 @NgModule({
@@ -17,7 +21,9 @@ const appRoutes: Routes = [
     AppComponent,
     ContentComponent,
     IntroductionComponent,
-    CaptureComponent
+    CaptureComponent,
+    CaptureStonesComponent,
+    IllegalMovesComponent
   ],
   imports: [
     BrowserModule,
