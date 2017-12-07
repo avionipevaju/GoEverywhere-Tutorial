@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 
 import * as WGo from 'wgo';
+import {ActivatedRoute} from '@angular/router';
+import {LevelService} from './level.service';
 declare var $: any;
 
 @Component({
@@ -13,43 +15,39 @@ export class CaptureComponent implements OnInit {
   boardMain: WGo.Board;
   levels: any[];
   currentStep: number;
+  text: String;
+  title: String;
+  description: String;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private levelService: LevelService) {}
 
   ngOnInit() {
-    this.levels = [];
+    this.levelService.initBoard();
+    this.route.params.subscribe(param => {
+      this.update(this.route.snapshot.params['level']);
+    });
+    this.update(this.route.snapshot.params['level']);
+  }
+
+  update(stage) {
+    this.boardMain = this.levelService.mainBoard;
+    this.boardMain.removeAllObjects();
+    this.levels = this.levelService.jsonLevels[stage];
+    console.log(this.levels);
+    this.text = this.levels['Text'];
+    this.title = this.levels['Title'];
     this.currentStep = 0;
-    const board = new WGo.Board(document.getElementById('board'), {
-      width: 300,
-      size: 9,
-      background: 'assets/wood6.jpg'
-    });
-
-    board.addEventListener('click', function(x, y) {
-      board.addObject({
-        x: x,
-        y: y,
-        c: WGo.B
-      });
-      $('#nextBtn').prop('disabled', false);
-    });
-
-    let temp = [];
-    temp.push({x: 4, y: 3, c: WGo.B}, {x: 3, y: 4, c: WGo.B}, {x: 4, y: 5, c: WGo.B}, {x: 4, y: 4, c: WGo.W});
-    this.levels.push(temp);
-    temp = [];
-    temp.push({x: 3, y: 1, c: WGo.B}, {x: 3, y: 2, c: WGo.W}, {x: 3, y: 3, c: WGo.W}, {x: 3, y: 4, c: WGo.B},
-      {x: 2, y: 2, c: WGo.B}, {x: 2, y: 3, c: WGo.B}, {x: 4, y: 2, c: WGo.B});
-    this.levels.push(temp);
-
-    this.boardMain = board;
     this.initBoard();
   }
 
   initBoard() {
-
+    this.description = this.levels[this.currentStep][this.levels[this.currentStep].length - 1]['description'];
     for (const level in this.levels[this.currentStep]) {
-      this.boardMain.addObject(this.levels[this.currentStep][level]);
+      const levelTmp = Number(level);
+      if (levelTmp === this.levels[this.currentStep].length - 1) {
+        break;
+      }
+      this.boardMain.addObject(this.levels[this.currentStep][levelTmp]);
     }
 
     $('#nextBtn').prop('disabled', true);
