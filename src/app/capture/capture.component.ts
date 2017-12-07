@@ -33,6 +33,7 @@ export class CaptureComponent implements OnInit {
   update(stage) {
     this.boardMain = this.levelService.mainBoard;
     this.gameMain = this.levelService.mainGame;
+    this.gameMain.firstPosition();
     this.boardMain.removeAllObjects();
     this.levels = this.levelService.jsonLevels[stage];
     console.log(this.levels);

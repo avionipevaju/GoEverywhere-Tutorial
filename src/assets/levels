@@ -19,13 +19,20 @@
   },
   "49kyu":{
   "0":[
-    {"x": 4, "y": 3, "c": -1}, {"x": 3, "y": 4, "c": 1}, {"x": 4, "y": 5, "c": 1}, {"x": 4, "y": 4, "c": -1},
-    {"description": "Black's turn. At the edge of the board, the situation is a little different."}
+    {"x": 2, "y": 0, "c": 1}, {"x": 3, "y": 0, "c": -1}, {"x": 4, "y": 0, "c": -1}, {"x": 6, "y": 0, "c": -1},
+    {"x": 3, "y": 1, "c": 1}, {"x": 4, "y": 1, "c": 1}, {"x": 6, "y": 1, "c": -1},
+    {"description": "Black's turn. At the edge of the board, the situation is a little different. Stones stuck at the edges are almost surrounded. - and therefore easier to get rid of. "}
   ],
   "1":[
-    {"x": 3, "y": 1, "c": 1}, {"x": 3, "y": 2, "c": -1}, {"x": 3, "y": 3, "c": -1}, {"x": 3, "y": 4, "c": 1},
-    {"x": 2, "y": 2, "c": 1}, {"x": 2, "y": 3, "c": 1}, {"x": 4, "y": 2, "c": 1},
-    {"description": " Black's turn. Two white stones are in atari. Capture them with one move! "}
+    {"x": 6, "y": 0, "c": 1}, {"x": 7, "y": 0, "c": 1}, {"x": 8, "y": 0, "c": -1}, {"x": 6, "y": 1, "c": 1},
+    {"x": 6, "y": 2, "c": 1}, {"x": 7, "y": 2, "c": -1}, {"x": 8, "y": 2, "c": -1}, {"x": 7, "y": 3, "c": -1},
+    {"description": "A stone in the corner is in Atari."}
+  ],
+  "2":[
+    {"x": 3, "y": 2, "c": 1}, {"x": 2, "y": 3, "c": 1}, {"x": 3, "y": 3, "c": -1}, {"x": 5, "y": 3, "c": -1},
+    {"x": 2, "y": 4, "c": 1}, {"x": 3, "y": 4, "c": -1}, {"x": 4, "y": 4, "c": 1}, {"x": 3, "y": 5, "c": 1},
+    {"x": 3, "y": 6, "c": -1},
+    {"description": "Now, two white stones are in Atari."}
   ],
   "Text": "A bit more difficult",
   "Title": "49 Kyu Problems"

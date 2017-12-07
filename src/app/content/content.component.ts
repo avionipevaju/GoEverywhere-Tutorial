@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {CaptureComponent} from "../capture/capture.component";
 declare var $: any;
 
 @Component({
@@ -10,7 +9,7 @@ declare var $: any;
 })
 export class ContentComponent implements OnInit {
 
-  constructor(private router: Router, private capture: CaptureComponent) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {}
 
