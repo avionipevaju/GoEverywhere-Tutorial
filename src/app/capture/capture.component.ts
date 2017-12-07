@@ -13,6 +13,7 @@ declare var $: any;
 export class CaptureComponent implements OnInit {
 
   boardMain: WGo.Board;
+  gameMain: WGo.Game;
   levels: any[];
   currentStep: number;
   text: String;
@@ -31,6 +32,7 @@ export class CaptureComponent implements OnInit {
 
   update(stage) {
     this.boardMain = this.levelService.mainBoard;
+    this.gameMain = this.levelService.mainGame;
     this.boardMain.removeAllObjects();
     this.levels = this.levelService.jsonLevels[stage];
     console.log(this.levels);
@@ -47,7 +49,9 @@ export class CaptureComponent implements OnInit {
       if (levelTmp === this.levels[this.currentStep].length - 1) {
         break;
       }
-      this.boardMain.addObject(this.levels[this.currentStep][levelTmp]);
+      const stoneObject = this.levels[this.currentStep][levelTmp];
+      this.boardMain.addObject(stoneObject);
+      this.gameMain.addStone(stoneObject.x, stoneObject.y, stoneObject.c);
     }
 
     $('#nextBtn').prop('disabled', true);
@@ -55,18 +59,21 @@ export class CaptureComponent implements OnInit {
 
   resetBoard() {
     this.boardMain.removeAllObjects();
+    this.gameMain.firstPosition();
     this.initBoard();
   }
 
   nextLevel() {
     this.currentStep++;
     this.boardMain.removeAllObjects();
+    this.gameMain.firstPosition();
     this.initBoard();
   }
 
   previousLevel() {
     this.currentStep--;
     this.boardMain.removeAllObjects();
+    this.gameMain.firstPosition();
     this.initBoard();
   }
 

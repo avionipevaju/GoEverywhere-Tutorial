@@ -11,6 +11,7 @@ export class LevelService {
 
   jsonLevels;
   mainBoard: WGo;
+  mainGame: WGo.Game;
 
   constructor(private http: HttpClient) { }
 
@@ -24,16 +25,31 @@ export class LevelService {
       size: 9,
       background: 'assets/wood6.jpg'
     });
+    const game = new WGo.Game(9);
 
     board.addEventListener('click', function(x, y) {
+      const deleted = game.play(x, y, 1);
+      console.log(deleted);
+      if (Number.isInteger(deleted)) {
+        alert('Illegal move');
+        return;
+      }
+
       board.addObject({
         x: x,
         y: y,
         c: WGo.B
       });
-      $('#nextBtn').prop('disabled', false);
+
+      if (deleted.length > 0) {
+        $('#nextBtn').prop('disabled', false);
+      }
+      for (const stone in deleted) {
+        board.removeObject(deleted[stone]);
+      }
     });
     this.mainBoard = board;
+    this.mainGame = game;
   }
 
 }

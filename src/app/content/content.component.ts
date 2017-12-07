@@ -10,8 +10,6 @@ declare var $: any;
 })
 export class ContentComponent implements OnInit {
 
-  first = true;
-
   constructor(private router: Router, private capture: CaptureComponent) { }
 
   ngOnInit() {}
