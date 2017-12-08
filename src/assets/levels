@@ -2,12 +2,12 @@
   "50kyu":{
     "0":[
       {"x": 4, "y": 3, "c": 1}, {"x": 3, "y": 4, "c": 1}, {"x": 4, "y": 5, "c": 1}, {"x": 4, "y": 4, "c": -1},
-      {"description": "Black's turn. Capture the white stone in atari. "}
+      {"description": "Black's turn. Capture the white stone in atari."}
     ],
     "1":[
       {"x": 3, "y": 1, "c": 1}, {"x": 3, "y": 2, "c": -1}, {"x": 3, "y": 3, "c": -1}, {"x": 3, "y": 4, "c": 1},
       {"x": 2, "y": 2, "c": 1}, {"x": 2, "y": 3, "c": 1}, {"x": 4, "y": 2, "c": 1},
-      {"description": " Black's turn. Two white stones are in atari. Capture them with one move! "}
+      {"description": "Black's turn. Two white stones are in atari. Capture them with one move!"}
     ],
     "2":[
       {"x": 3, "y": 2, "c": -1}, {"x": 3, "y": 3, "c": 1}, {"x": 3, "y": 4, "c": -1}, {"x": 3, "y": 5, "c": 1},
