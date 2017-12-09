@@ -2,40 +2,76 @@
   "50kyu":{
     "0":[
       {"x": 4, "y": 3, "c": 1}, {"x": 3, "y": 4, "c": 1}, {"x": 4, "y": 5, "c": 1}, {"x": 4, "y": 4, "c": -1},
+      {"service" : []},
       {"description": "Black's turn. Capture the white stone in atari."}
     ],
     "1":[
       {"x": 3, "y": 1, "c": 1}, {"x": 3, "y": 2, "c": -1}, {"x": 3, "y": 3, "c": -1}, {"x": 3, "y": 4, "c": 1},
       {"x": 2, "y": 2, "c": 1}, {"x": 2, "y": 3, "c": 1}, {"x": 4, "y": 2, "c": 1},
+      {"service" : []},
       {"description": "Black's turn. Two white stones are in atari. Capture them with one move!"}
     ],
     "2":[
       {"x": 3, "y": 2, "c": -1}, {"x": 3, "y": 3, "c": 1}, {"x": 3, "y": 4, "c": -1}, {"x": 3, "y": 5, "c": 1},
       {"x": 4, "y": 5, "c": -1}, {"x": 2, "y": 3, "c": -1}, {"x": 2, "y": 4, "c": 1}, {"x": 1, "y": 3, "c": -1},
+      {"service" : []},
       {"description": "Black's turn. Even if there are other stones nearby, just do the same."}
     ],
     "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
     "Title": "50 Kyu Problems"
   },
   "49kyu":{
-  "0":[
-    {"x": 2, "y": 0, "c": 1}, {"x": 3, "y": 0, "c": -1}, {"x": 4, "y": 0, "c": -1}, {"x": 6, "y": 0, "c": -1},
-    {"x": 3, "y": 1, "c": 1}, {"x": 4, "y": 1, "c": 1}, {"x": 6, "y": 1, "c": -1},
-    {"description": "Black's turn. At the edge of the board, the situation is a little different. Stones stuck at the edges are almost surrounded. - and therefore easier to get rid of. "}
-  ],
-  "1":[
-    {"x": 6, "y": 0, "c": 1}, {"x": 7, "y": 0, "c": 1}, {"x": 8, "y": 0, "c": -1}, {"x": 6, "y": 1, "c": 1},
-    {"x": 6, "y": 2, "c": 1}, {"x": 7, "y": 2, "c": -1}, {"x": 8, "y": 2, "c": -1}, {"x": 7, "y": 3, "c": -1},
-    {"description": "A stone in the corner is in Atari."}
-  ],
-  "2":[
-    {"x": 3, "y": 2, "c": 1}, {"x": 2, "y": 3, "c": 1}, {"x": 3, "y": 3, "c": -1}, {"x": 5, "y": 3, "c": -1},
-    {"x": 2, "y": 4, "c": 1}, {"x": 3, "y": 4, "c": -1}, {"x": 4, "y": 4, "c": 1}, {"x": 3, "y": 5, "c": 1},
-    {"x": 3, "y": 6, "c": -1},
-    {"description": "Now, two white stones are in Atari."}
-  ],
-  "Text": "A bit more difficult",
-  "Title": "49 Kyu Problems"
-}
+    "0":[
+      {"x": 2, "y": 0, "c": 1}, {"x": 3, "y": 0, "c": -1}, {"x": 4, "y": 0, "c": -1}, {"x": 6, "y": 0, "c": -1},
+      {"x": 3, "y": 1, "c": 1}, {"x": 4, "y": 1, "c": 1}, {"x": 6, "y": 1, "c": -1},
+      {"service" : []},
+      {"description": "Black's turn. At the edge of the board, the situation is a little different. Stones stuck at the edges are almost surrounded. - and therefore easier to get rid of. "}
+    ],
+    "1":[
+      {"x": 6, "y": 0, "c": 1}, {"x": 7, "y": 0, "c": 1}, {"x": 8, "y": 0, "c": -1}, {"x": 6, "y": 1, "c": 1},
+      {"x": 6, "y": 2, "c": 1}, {"x": 7, "y": 2, "c": -1}, {"x": 8, "y": 2, "c": -1}, {"x": 7, "y": 3, "c": -1},
+      {"service" : []},
+      {"description": "A stone in the corner is in Atari."}
+    ],
+    "2":[
+      {"x": 3, "y": 2, "c": 1}, {"x": 2, "y": 3, "c": 1}, {"x": 3, "y": 3, "c": -1}, {"x": 5, "y": 3, "c": -1},
+      {"x": 2, "y": 4, "c": 1}, {"x": 3, "y": 4, "c": -1}, {"x": 4, "y": 4, "c": 1}, {"x": 3, "y": 5, "c": 1},
+      {"x": 3, "y": 6, "c": -1},
+      {"service" : []},
+      {"description": "Now, two white stones are in Atari."}
+    ],
+    "Text": "A bit more difficult",
+    "Title": "49 Kyu Problems"
+ },
+  "48kyu":{
+     "0":[
+       {"x": 3, "y": 2, "c": 1}, {"x": 2, "y": 3, "c": 1}, {"x": 2, "y": 4, "c": 1}, {"x": 2, "y": 5, "c": 1},
+       {"x": 4, "y": 5, "c": 1},{"x": 3, "y": 6, "c": 1},{"x": 3, "y": 3, "c": -1},
+       {"x": 3, "y": 4, "c": -1},{"x": 3, "y": 5, "c": -1},{"x": 5, "y": 3, "c": -1},{"x": 5, "y": 5, "c": -1},
+       {"service" : [{"x": 4, "y": 3, "c": -1, "f": 1},{"x": 4, "y": 4, "c": -1, "f": -1},{"x": 4, "y": 2, "c": -1, "f": 1}]},
+       {"description": "Black's turn. Capture the white stone in atari."}
+     ],
+     "1":[
+       {"x": 1, "y": 4, "c": 1}, {"x": 0, "y": 5, "c": 1}, {"x": 0, "y": 3, "c": -1}, {"x": 0, "y": 4, "c": -1},
+       {"x": 2, "y": 0, "c": -1}, {"x": 2, "y": 1, "c": -1}, {"x": 2, "y": 2, "c": -1},{"x": 2, "y": 3, "c": -1},
+       {"service" : []},
+       {"description": "Black's turn. Two white stones are in atari. Capture them with one move!"}
+     ],
+     "2":[
+       {"x": 2, "y": 1, "c": -1}, {"x": 3, "y": 1, "c": 1}, {"x": 4, "y": 1, "c": -1}, {"x": 5, "y": 1, "c": 1},
+       {"x": 2, "y": 2, "c": 1}, {"x": 3, "y": 2, "c": -1}, {"x": 4, "y": 2, "c": -1}, {"x": 5, "y": 2, "c": 1},
+       {"x": 1, "y": 3, "c": 1}, {"x": 2, "y": 3, "c": -1}, {"x": 3, "y": 3, "c": -1}, {"x": 4, "y": 3, "c": 1},
+       {"x": 5, "y": 3, "c": -1},{"x": 6, "y": 3, "c": 1},{"x": 7, "y": 3, "c": 1},
+       {"x": 1, "y": 4, "c": -1}, {"x": 2, "y": 4, "c": 1}, {"x": 3, "y": 4, "c": 1}, {"x": 4, "y": 4, "c": 1},
+       {"x": 5, "y": 4, "c": -1},{"x": 6, "y": 4, "c": -1},{"x": 7, "y": 4, "c": -1},
+       {"x": 2, "y": 5, "c": -1},{"x": 4, "y": 5, "c": -1},{"x": 5, "y": 5, "c": 1},{"x": 6, "y": 5, "c": 1},
+       {"x": 5, "y": 6, "c": -1},{"x": 6, "y": 6, "c": 1},{"x": 5, "y": 7, "c": -1},{"x": 6, "y": 7, "c": 1},
+       {"service" : []},
+       {"description": "Black's turn. Even if there are other stones nearby, just do the same."}
+     ],
+     "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
+     "Title": "50 Kyu Problems"
+   }
+
 
 }

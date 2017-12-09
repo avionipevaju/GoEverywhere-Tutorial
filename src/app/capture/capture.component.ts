@@ -19,6 +19,7 @@ export class CaptureComponent implements OnInit {
   text: String;
   title: String;
   description: String;
+  stage;
 
   constructor(private route: ActivatedRoute, private levelService: LevelService) {}
 
@@ -40,14 +41,18 @@ export class CaptureComponent implements OnInit {
     this.text = this.levels['Text'];
     this.title = this.levels['Title'];
     this.currentStep = 0;
+    this.stage = stage;
     this.initBoard();
   }
 
   initBoard() {
     this.description = this.levels[this.currentStep][this.levels[this.currentStep].length - 1]['description'];
+    //const scenario = this.levels[this.currentStep][this.levels[this.currentStep].length - 2]['scenario'];
+
+    this.levelService.initScenario(this.stage,this.currentStep);
     for (const level in this.levels[this.currentStep]) {
       const levelTmp = Number(level);
-      if (levelTmp === this.levels[this.currentStep].length - 1) {
+      if (levelTmp === this.levels[this.currentStep].length - 2) {
         break;
       }
       const stoneObject = this.levels[this.currentStep][levelTmp];
