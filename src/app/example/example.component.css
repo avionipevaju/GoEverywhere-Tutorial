@@ -1,0 +1,16 @@
+#listComponent{
+  margin: 1em;
+}
+
+h3{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+#text{
+  margin: 1em;
+}
+
+#image{
+  width: 15em;
+}

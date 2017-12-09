@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {LevelService} from './capture/level.service';
+import {LoaderService} from './example/loader.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,10 @@ import {LevelService} from './capture/level.service';
 export class AppComponent implements OnInit {
   title = 'GoEverywhere Tutorial';
 
-  constructor(private levelService: LevelService) {}
+  constructor(private levelService: LevelService, private loaderService: LoaderService) {}
 
   ngOnInit() {
     this.levelService.getJSON();
+    this.loaderService.getPageContent();
   }
 }
