@@ -10,6 +10,11 @@
 <div class="row">
     <div id="board"></div>
 </div>
+
+<div *ngIf="visible" class="text-center alert " >
+  <strong>Success!</strong> You are ready for NEXT step.
+</div>
+
   <div class="row">
     <div class="col-sm-6 text-right">
       <button (click)="previousLevel()" id="backBtn" class="btn">BACK</button>

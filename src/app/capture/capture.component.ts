@@ -21,6 +21,12 @@ export class CaptureComponent implements OnInit {
   description: String;
   stage;
 
+  isSuccesVisible: boolean = false;
+  isFailVisible: boolean = false;
+  visible: boolean = false;
+
+
+
   constructor(private route: ActivatedRoute, private levelService: LevelService) {}
 
   ngOnInit() {
@@ -34,6 +40,11 @@ export class CaptureComponent implements OnInit {
   update(stage) {
     this.boardMain = this.levelService.mainBoard;
     this.gameMain = this.levelService.mainGame;
+    this.isSuccesVisible = this.levelService.succes;
+    this.isFailVisible = this.levelService.fail;
+    console.log("Na pocetku visible je : " + this.visible);
+    this.visible = this.levelService.visible;
+
     this.gameMain.firstPosition();
     this.boardMain.removeAllObjects();
     this.levels = this.levelService.jsonLevels[stage];
