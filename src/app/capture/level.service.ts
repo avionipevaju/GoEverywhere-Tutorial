@@ -76,7 +76,7 @@ export class LevelService {
 
     const game = new WGo.Game(9);
 
-    let scenario = this.jsonLevels['48kyu'][0][this.jsonLevels['48kyu'][0].length - 2]['service'];
+    //let scenario = this.jsonLevels['48kyu'][0][this.jsonLevels['48kyu'][0].length - 2]['service'];
     //let scenario = self.scenario;
 
     //console.log("Ovo je scenario: ");
