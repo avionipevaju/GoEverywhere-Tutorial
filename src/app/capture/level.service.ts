@@ -3,7 +3,6 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 import {HttpClient} from '@angular/common/http';
 import * as WGo from 'wgo';
-import {isSuccess} from "@angular/http/src/http_utils";
 declare var $: any;
 
 
@@ -76,81 +75,14 @@ export class LevelService {
     mboard.addCustomObject(coordinates);
 
     const game = new WGo.Game(9);
-    let self = this;
+
     let scenario = this.jsonLevels['48kyu'][0][this.jsonLevels['48kyu'][0].length - 2]['service'];
     //let scenario = self.scenario;
 
     //console.log("Ovo je scenario: ");
     //console.log(scenario)
 
-    mboard.addEventListener('click', function(x, y) {
-      const deleted = game.play(x, y, 1);
 
-      if (Number.isInteger(deleted)) {
-        alert('Illegal move');
-        return;
-      }
-
-      mboard.addObject({
-        x: x,
-        y: y,
-        c: WGo.B
-      });
-
-      setTimeout(function(){
-        console.log(self.scenario);
-        for(let scen of scenario){
-
-          const stoneObject = {
-            x: scen.x,
-            y: scen.y,
-            c: scen.c
-          };
-          if(game.getStone(stoneObject.x, stoneObject.y) === 0){
-
-            mboard.addObject({
-              x: stoneObject.x,
-              y: stoneObject.y,
-              c: WGo.W
-            });
-
-            //game.addStone(stoneObject.x, stoneObject.y, -1);
-            const deleted1 = game.play(stoneObject.x, stoneObject.y, -1);
-            for (const stone in deleted1) {
-              mboard.removeObject(deleted1[stone]);
-            }
-            console.log(deleted1);
-
-            if(scen.f === 1){
-              self.visible = true;
-              console.log("usao je zavrsnicu i visible je: " +self.visible);
-              self.succes = false;
-              self.fail = true;
-              return;
-            }
-            break;
-          }
-        }
-
-        for (let stone in deleted) {
-          console.log("Skinut kamen: "+deleted[stone].x + " | "+deleted[stone].y);
-          mboard.removeObject(deleted[stone]);
-
-        }
-
-        if (deleted.length > 0) {
-          if(game.getStone(deleted[0].x, deleted[0].y) === -1) {
-            $('#nextBtn').prop('disabled', false);
-            console.log("usao je zavrsnicu2 i visible je: " +self.visible);
-            self.visible = false;
-            self.fail = false;
-            self.succes = true;
-            return;
-          }
-        }
-
-      },500);
-    });
     this.mainBoard = mboard;
     this.mainGame = game;
   }

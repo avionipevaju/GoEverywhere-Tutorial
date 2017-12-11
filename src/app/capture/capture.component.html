@@ -11,8 +11,14 @@
     <div id="board"></div>
 </div>
 
-<div *ngIf="visible" class="text-center alert " >
-  <strong>Success!</strong> You are ready for NEXT step.
+<div *ngIf="visible"
+     class="text-center alert"
+     [ngClass]="{
+        'alert-success' : isSuccessVisible,
+        'alert-danger' : !isSuccessVisible
+     }"
+      >
+  <strong>{{ message }}</strong>
 </div>
 
   <div class="row">
