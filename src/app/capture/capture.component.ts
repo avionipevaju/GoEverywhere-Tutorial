@@ -88,10 +88,14 @@ export class CaptureComponent implements OnInit {
         c: WGo.B
       });
 
+      let handicap: boolean = true;
+
       setTimeout(function(){
         console.log(deleted);
         if(deleted.length <= 0){
+
           for(let scen of self.stage){
+
 
             const stoneObject = {
               x: scen.x,
@@ -99,7 +103,7 @@ export class CaptureComponent implements OnInit {
               c: scen.c
             };
             if(self.gameMain.getStone(stoneObject.x, stoneObject.y) === 0){
-
+              handicap = false;
               self.boardMain.addObject(stoneObject);
 
               //game.addStone(stoneObject.x, stoneObject.y, -1);
@@ -118,17 +122,23 @@ export class CaptureComponent implements OnInit {
               }
               break;
             }
+
           }
         }
+
+
+
         for (let stone in deleted) {
           console.log("Skinut kamen: "+deleted[stone].x + " | "+deleted[stone].y + " a njegov boja je "+(self.gameMain.getStone(deleted[stone].x, deleted[stone].y)));
           self.boardMain.removeObject(deleted[stone]);
 
         }
-        console.log("PRE IF-a");
-        if (deleted.length > 0) {
-          console.log("VALIDACIJA "+self.gameMain.isOnBoard(deleted[0].x, deleted[0].y));
-          if((self.gameMain.getStone(deleted[0].x, deleted[0].y)) === 0) {
+        console.log("PRE IF-a: 1. uslov " + (handicap && deleted.length <= 0));
+        console.log("PRE IF-a: 2. uslov " + (deleted.length > 0));
+
+        if (deleted.length > 0 || (handicap && deleted.length <= 0)) {
+
+          if( (handicap && deleted.length <= 0) || ((self.gameMain.getStone(deleted[0].x, deleted[0].y)) === 0)) {
             console.log("POSLE IF-a");
             $('#nextBtn').prop('disabled', false);
             self.isSuccessVisible = true;
