@@ -12,11 +12,17 @@ export class LevelService {
   jsonLevels;
   mainBoard: WGo;
   mainGame: WGo.Game;
+  scenario;
+
+  fail: boolean = false;
+  succes: boolean = false;
+  visible: boolean = true;
 
   constructor(private http: HttpClient) { }
 
   public getJSON() {
     this.http.get('../assets/levels').subscribe(data => this.jsonLevels = data);
+
   }
 
   public initBoard() {
@@ -31,6 +37,7 @@ export class LevelService {
       },
       background: 'assets/wood_512.jpg'
     });
+
 
     const coordinates = {
       // draw on grid layer
@@ -69,29 +76,23 @@ export class LevelService {
 
     const game = new WGo.Game(9);
 
-    mboard.addEventListener('click', function(x, y) {
-      const deleted = game.play(x, y, 1);
-      console.log(deleted);
-      if (Number.isInteger(deleted)) {
-        alert('Illegal move');
-        return;
-      }
+    //let scenario = this.jsonLevels['48kyu'][0][this.jsonLevels['48kyu'][0].length - 2]['service'];
+    //let scenario = self.scenario;
 
-      mboard.addObject({
-        x: x,
-        y: y,
-        c: WGo.B
-      });
+    //console.log("Ovo je scenario: ");
+    //console.log(scenario)
 
-      if (deleted.length > 0) {
-        $('#nextBtn').prop('disabled', false);
-      }
-      for (const stone in deleted) {
-       mboard.removeObject(deleted[stone]);
-      }
-    });
+
     this.mainBoard = mboard;
     this.mainGame = game;
+  }
+
+  public initScenario(stage,currStep){
+
+   this.scenario = this.jsonLevels[stage][currStep][this.jsonLevels[stage][currStep].length - 2]['service'];
+
+    //[class.alert-danger]="isFailVisible" [class.alert-success]="isSuccesVisible"
+
   }
 
 }
