@@ -19,5 +19,13 @@
     "Subtitle": "",
     "NextLesson": "capture",
     "NextStage": "50kyu"
+  },
+  "beginning":{
+    "0": {"ImageUrl": "assets/beginning.gif", "ImageDescription": "As shown above, the 4 areas near the coner of the board is called \"corners\" and the area between the two corners are \"sides\" and the center is \"middle\". There are no distinct borders between these areas and we are just using these names for convenience. From which area do you want to start to move?"},
+    "Text": "By now you may already understand how to capture stones. However, in the beginning of a real game, you have to play on a board with nothing on it.First, please take a look at the vast 19x19 board and see how we divide it into areas and how we refer to each one..",
+    "Title": "How to get started?",
+    "Subtitle": "",
+    "NextLesson": "capture",
+    "NextStage": "50kyu"
   }
 }
