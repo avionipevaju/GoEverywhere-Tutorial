@@ -25,6 +25,8 @@ export class CaptureComponent implements OnInit {
   visible: boolean = false;
   message: String = "";
 
+  check: boolean = false;
+
 
 
   constructor(private route: ActivatedRoute, private levelService: LevelService) {}
@@ -43,6 +45,8 @@ export class CaptureComponent implements OnInit {
 
     this.isSuccessVisible = false;
     this.visible = false;
+    this.check = false;
+
 
     this.gameMain.firstPosition();
     this.boardMain.removeAllObjects();
@@ -100,9 +104,27 @@ export class CaptureComponent implements OnInit {
             const stoneObject = {
               x: scen.x,
               y: scen.y,
-              c: scen.c
+              c: scen.c,
+
             };
-            if(self.gameMain.getStone(stoneObject.x, stoneObject.y) === 0){
+
+            //Provera za crni stone
+            if( scen.c === 1 && self.gameMain.getStone(stoneObject.x, stoneObject.y) === WGo.B && self.check === false){
+              if(scen.f === 1){
+                self.visible = true;
+                self.isSuccessVisible = true;
+                $('#nextBtn').prop('disabled', false);
+                console.log("usao je zavrsnicu SUCCESS proverom za crni stone i success je: " +self.isSuccessVisible);
+                self.message = "Success! You are ready for NEXT step.";
+                return;
+              }
+            }
+
+
+            if(self.gameMain.getStone(stoneObject.x, stoneObject.y) === 0 && scen.c != 1){
+
+              console.log("Scenario color je : " + scen.c);
+
               handicap = false;
               self.boardMain.addObject(stoneObject);
 
@@ -122,6 +144,7 @@ export class CaptureComponent implements OnInit {
               }
               break;
             }
+            else{handicap = true;}
 
           }
         }
@@ -161,6 +184,7 @@ export class CaptureComponent implements OnInit {
     this.boardMain.removeAllObjects();
     this.gameMain.firstPosition();
     this.visible = false;
+    this.check = false;
     this.initBoard();
   }
 
@@ -169,6 +193,7 @@ export class CaptureComponent implements OnInit {
     this.boardMain.removeAllObjects();
     this.gameMain.firstPosition();
     this.visible = false;
+    this.check = false;
     this.initBoard();
   }
 
@@ -177,6 +202,7 @@ export class CaptureComponent implements OnInit {
     this.boardMain.removeAllObjects();
     this.gameMain.firstPosition();
     this.visible = false;
+    this.check = false;
     this.initBoard();
   }
 

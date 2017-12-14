@@ -95,7 +95,7 @@
         ],
         "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
         "Title": "50 Kyu Problems"
-      },
+   },
 
   "46kyu":{
           "0":[
@@ -135,7 +135,7 @@
           ],
           "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
           "Title": "50 Kyu Problems"
-        },
+  },
   "36kyu":{
           "0":[
             {"x": 2, "y": 3, "c": -1}, {"x": 6, "y": 3, "c": 1}, {"x": 1, "y": 4, "c": -1},
@@ -156,6 +156,7 @@
             {"x": 2, "y": 7, "c": 1}, {"x": 3, "y": 7, "c": -1}, {"x": 4, "y": 7, "c": 1}, {"x": 5, "y": 7, "c": 1},
             {"x": 6, "y": 7, "c": -1}, {"x": 3, "y": 8, "c": 1},
             {"service" : [
+            {"x": 4, "y": 8, "c": 1, "f": 1},
             {"x": 5, "y": 8, "c": -1, "f": -1}, {"x": 6, "y": 8, "c": -1, "f": -1}, {"x": 4, "y": 8, "c": -1, "f": 1},
             {"x": 2, "y": 8, "c": -1, "f": 1}
             ]},
@@ -163,7 +164,7 @@
           ],
           "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
           "Title": "50 Kyu Problems"
-        },
+  },
   "cs":{
             "0":[
               {"x": 3, "y": 2, "c": 1}, {"x": 4, "y": 2, "c": -1}, {"x": 3, "y": 3, "c": 1},
@@ -187,7 +188,76 @@
             ],
             "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
             "Title": "50 Kyu Problems"
-          }
+  },
+  "34kyu":{
+              "0":[
+                {"x": 3, "y": 4, "c": 1}, {"x": 2, "y": 5, "c": -1}, {"x": 4, "y": 5, "c": -1}, {"x": 3, "y": 6, "c": 1},
+                {"service" : [{"x": 3, "y": 5, "c": -1, "f": 1}]},
+                {"description": "Black's turn. Capture the white stone in atari."}
+              ],
+              "1":[
+                {"x": 4, "y": 5, "c": -1}, {"x": 2, "y": 6, "c": 1}, {"x": 3, "y": 6, "c": 1}, {"x": 4, "y": 6, "c": -1},
+                {"x": 5, "y": 6, "c": 1},
+                {"service" : [{"x": 4, "y": 7, "c": -1, "f": 1}]},
+                {"description": "Black's turn. Two white stones are in atari. Capture them with one move!"}
+              ],
+              "2":[
+                {"x": 4, "y": 5, "c": -1}, {"x": 2, "y": 6, "c": 1}, {"x": 3, "y": 6, "c": 1}, {"x": 4, "y": 6, "c": -1},
+                {"x": 5, "y": 6, "c": 1}, {"x": 4, "y": 7, "c": 1}, {"x": 5, "y": 7, "c": -1},
+                {"service" : [{"x": 6, "y": 7, "c": 1, "f": 1}, {"x": 3, "y": 7, "c": -1, "f": 1}, {"x": 6, "y": 6, "c": -1, "f": 1}]},
+                {"description": "Black's turn. Even if there are other stones nearby, just do the same."}
+              ],
+              "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
+              "Title": "50 Kyu Problems"
+  },
+  "35kyu":{
+                "0":[
+                  {"x": 2, "y": 1, "c": 1}, {"x": 3, "y": 1, "c": -1}, {"x": 2, "y": 2, "c": 1}, {"x": 3, "y": 2, "c": -1},
+                  {"x": 4, "y": 2, "c": -1}, {"x": 5, "y": 2, "c": -1}, {"x": 1, "y": 3, "c": 1}, {"x": 3, "y": 3, "c": 1},
+                  {"x": 6, "y": 3, "c": -1}, {"x": 4, "y": 4, "c": 1}, {"x": 6, "y": 4, "c": -1}, {"x": 2, "y": 6, "c": 1},
+                  {"x": 4, "y": 6, "c": 1}, {"x": 6, "y": 6, "c": -1}, {"x": 6, "y": 7, "c": -1},
+                  {"service" : [{"x": 5, "y": 7, "c": 1, "f": 1} ,{"x": 4, "y": 7, "c": -1, "f": 1}, {"x": 5, "y": 7, "c": -1, "f": 1}]},
+                  {"description": "Black's turn. Capture the white stone in atari."}
+                ],
+
+                "1":[
+                  {"x": 5, "y": 0, "c": 1}, {"x": 6, "y": 0, "c": -1}, {"x": 4, "y": 1, "c": 1}, {"x": 5, "y": 1, "c": 1},
+                  {"x": 6, "y": 1, "c": -1}, {"x": 4, "y": 2, "c": 1}, {"x": 5, "y": 2, "c": -1}, {"x": 3, "y": 3, "c": 1},
+                  {"x": 4, "y": 3, "c": 1}, {"x": 5, "y": 3, "c": -1}, {"x": 3, "y": 4, "c": 1}, {"x": 4, "y": 4, "c": -1},
+                  {"x": 6, "y": 4, "c": -1}, {"x": 3, "y": 5, "c": 1}, {"x": 4, "y": 5, "c": -1}, {"x": 3, "y": 6, "c": 1},
+                  {"x": 4, "y": 6, "c": -1}, {"x": 3, "y": 7, "c": 1}, {"x": 4, "y": 7, "c": -1}, {"x": 3, "y": 8, "c": -1},
+                  {"service" : [
+                    {"x": 2, "y": 8, "c": -1, "f": 1}, {"x": 4, "y": 8, "c": -1, "f": -1},
+                    {"x": 2, "y": 7, "c": 1, "f": 1}, {"x": 1, "y": 7, "c": 1, "f": 1}, {"x": 2, "y": 6, "c": 1, "f": 1},
+                    {"x": 2, "y": 7, "c": -1, "f": -1},
+                    {"x": 1, "y": 8, "c": -1, "f": 1}, {"x": 1, "y": 8, "c": -1, "f": -1}, {"x": 1, "y": 7, "c": -1, "f": -1},
+                    {"x": 0, "y": 8, "c": -1, "f": 1}, {"x": 0, "y": 7, "c": -1, "f": 1}, {"x": 0, "y": 6, "c": -1, "f": 1}
+                  ]},
+                  {"description": "Black's turn. Even if there are other stones nearby, just do the same."}
+                ],
+                "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
+                "Title": "50 Kyu Problems"
+  },
+  "SITF":{
+                "0":[
+                  {"x": 1, "y": 2, "c": -1}, {"x": 2, "y": 2, "c": 1},
+                  {"service" : [{"x": 1, "y": 1, "c": 1, "f": 1}, {"x": 1, "y": 3, "c": 1, "f": 1}, {"x": 1, "y": 1, "c": -1, "f": 1}]},
+                  {"description": "Black's turn. Capture the white stone in atari."}
+                ],
+
+                "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
+                "Title": "50 Kyu Problems"
+  },
+  "EYS":{
+                "0":[
+                  {"x": 5, "y": 5, "c": 1}, {"x": 6, "y": 5, "c": -1}, {"x": 5, "y": 6, "c": -1},
+                  {"service" : [{"x": 4, "y": 5, "c": 1, "f": 1}, {"x": 5, "y": 4, "c": 1, "f": 1}, {"x": 4, "y": 5, "c": -1, "f": 1}]},
+                  {"description": "Black's turn. Capture the white stone in atari."}
+                ],
+
+                "Text": "Capture Opponent's Atari stones! \n You can click on the board and take the opponent's stones. If you see the word failed, just \"retry\" until you get the success message below the board. Here, a 9 x 9 board is used. Normally, a 19 x 19 board is used. The smaller board is recommended for beginners. ",
+                "Title": "50 Kyu Problems"
+  }
 
 
 }
