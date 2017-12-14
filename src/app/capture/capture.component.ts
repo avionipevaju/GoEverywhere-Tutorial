@@ -98,19 +98,19 @@ export class CaptureComponent implements OnInit {
         console.log(deleted);
         if(deleted.length <= 0){
 
-          for(let scen of self.stage){
+          for(let scen in self.stage){
 
 
             const stoneObject = {
-              x: scen.x,
-              y: scen.y,
-              c: scen.c,
+              x: self.stage[scen].x,
+              y: self.stage[scen].y,
+              c: self.stage[scen].c,
 
             };
 
             //Provera za crni stone
-            if( scen.c === 1 && self.gameMain.getStone(stoneObject.x, stoneObject.y) === WGo.B && self.check === false){
-              if(scen.f === 1){
+            if( self.stage[scen].c === 1 && self.gameMain.getStone(stoneObject.x, stoneObject.y) === WGo.B && self.check === false){
+              if(self.stage[scen].f === 1){
                 self.visible = true;
                 self.isSuccessVisible = true;
                 $('#nextBtn').prop('disabled', false);
@@ -121,9 +121,16 @@ export class CaptureComponent implements OnInit {
             }
 
 
-            if(self.gameMain.getStone(stoneObject.x, stoneObject.y) === 0 && scen.c != 1){
+            if(self.gameMain.getStone(stoneObject.x, stoneObject.y) === 0 && self.stage[scen].c != 1){
 
-              console.log("Scenario color je : " + scen.c);
+              if(Number(scen) != 0 && self.stage[Number(scen) - 1].c === 1){
+                self.check = true;
+              }
+              if(self.stage[Number(0)].c === 1){
+                self.check = true;
+              }
+
+              console.log("Scenario color je : " + self.stage[scen].c);
 
               handicap = false;
               self.boardMain.addObject(stoneObject);
@@ -135,7 +142,7 @@ export class CaptureComponent implements OnInit {
               }
               console.log(deleted1);
 
-              if(scen.f === 1){
+              if(self.stage[scen].f === 1){
                 self.visible = true;
                 self.isSuccessVisible = false;
                 console.log("usao je zavrsnicu FAIL i success je: " +self.isSuccessVisible);
