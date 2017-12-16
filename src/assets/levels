@@ -257,7 +257,20 @@
 
                 "Text": "",
                 "Title": "Extending your stone"
-  }
+  },
+  "DAW":{
+                  "0":[
+                    {"x": 0, "y": 0, "c": -1}, {"x": 4, "y": 0, "c": -1}, {"x": 5, "y": 0, "c": -1}, {"x": 0, "y": 3, "c": -1},
+                    {"x": 1, "y": 3, "c": -1}, {"x": 2, "y": 3, "c": -1}, {"x": 6, "y": 3, "c": -1}, {"x": 6, "y": 2, "c": -1},
+                    {"x": 6, "y": 4, "c": -1}, {"x": 4, "y": 5, "c": -1}, {"x": 2, "y": 6, "c": -1}, {"x": 3, "y": 6, "c": -1},
+                    {"x": 4, "y": 6, "c": -1}, {"x": 8, "y": 7, "c": -1}, {"x": 7, "y": 8, "c": -1}, {"x": 8, "y": 8, "c": -1},
+                    {"service" : []},
+                    {"description": "On this board, only black can make moves. That is, the white player will never resist here. Capture all the white stones. However, do it with as few stones as possible."}
+                  ],
+
+                  "Text": "Take a break",
+                  "Title": "Destroy all whites"
+    }
 
 
 }

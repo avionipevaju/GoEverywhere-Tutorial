@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ContentComponent } from './content/content.component';
 import { IntroductionComponent } from './introduction/introduction.component';
 import { CaptureComponent } from './capture/capture.component';
+import { DestroyComponent } from './capture/destroy.component';
 import { LevelService } from './capture/level.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { ExampleComponent } from './example/example.component';
@@ -14,7 +15,8 @@ import { LoaderService } from './example/loader.service';
 const appRoutes: Routes = [
   {path: '', component: IntroductionComponent, pathMatch: 'full'},
   {path: 'capture', component: CaptureComponent},
-  {path: 'example', component: ExampleComponent}
+  {path: 'example', component: ExampleComponent},
+  {path: 'dest-all-whites', component: DestroyComponent}
 ];
 
 @NgModule({
@@ -23,6 +25,7 @@ const appRoutes: Routes = [
     ContentComponent,
     IntroductionComponent,
     CaptureComponent,
+    DestroyComponent,
     ExampleComponent
   ],
   imports: [
@@ -30,7 +33,7 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     HttpClientModule,
   ],
-  providers: [LevelService, CaptureComponent, LoaderService],
+  providers: [LevelService, CaptureComponent, LoaderService, DestroyComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
