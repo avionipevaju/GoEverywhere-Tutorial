@@ -11,6 +11,7 @@ import { LevelService } from './capture/level.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import { ExampleComponent } from './example/example.component';
 import { LoaderService } from './example/loader.service';
+import { DefendingComponent } from './defending/defending.component';
 
 const appRoutes: Routes = [
   {path: '', component: IntroductionComponent, pathMatch: 'full'},
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     IntroductionComponent,
     CaptureComponent,
     DestroyComponent,
-    ExampleComponent
+    ExampleComponent,
+    DefendingComponent
   ],
   imports: [
     BrowserModule,

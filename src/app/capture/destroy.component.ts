@@ -90,7 +90,6 @@ export class DestroyComponent implements OnInit {
           self.boardMain.removeObject(deleted[stone]);
 
         }
-
         let board = self.boardMain.getState().objects;
         for(let i in board){
           for(let j in board[i]){

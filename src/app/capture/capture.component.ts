@@ -19,6 +19,8 @@ export class CaptureComponent implements OnInit {
   text: String;
   title: String;
   description: String;
+  success: String;
+  fail: String;
   stage;
 
   isSuccessVisible: boolean = false;
@@ -61,13 +63,15 @@ export class CaptureComponent implements OnInit {
   initBoard() {
     this.description = this.levels[this.currentStep][this.levels[this.currentStep].length - 1]['description'];
     this.stage = this.levels[this.currentStep][this.levels[this.currentStep].length - 2]['service'];
+    this.success = this.levels[this.currentStep][this.levels[this.currentStep].length - 3]['success'];
+    this.fail = this.levels[this.currentStep][this.levels[this.currentStep].length - 3]['fail'];
 
-    //let scenario = this.levels['48kyu'][0][this.levels['48kyu'][0].length - 2]['service'];
+    if(this.success === "") this.success = "Success! You are ready for NEXT step.";
+    if(this.fail === "") this.fail = "Fail! RESET BOARD and try again";
 
-    //this.levelService.initScenario(this.stage,this.currentStep);
     for (const level in this.levels[this.currentStep]) {
       const levelTmp = Number(level);
-      if (levelTmp === this.levels[this.currentStep].length - 2) {
+      if (levelTmp === this.levels[this.currentStep].length - 3) {
         break;
       }
       const stoneObject = this.levels[this.currentStep][levelTmp];
@@ -115,7 +119,7 @@ export class CaptureComponent implements OnInit {
                 self.isSuccessVisible = true;
                 $('#nextBtn').prop('disabled', false);
                 console.log("usao je zavrsnicu SUCCESS proverom za crni stone i success je: " +self.isSuccessVisible);
-                self.message = "Success! You are ready for NEXT step.";
+                self.message = self.success;
                 return;
               }
             }
@@ -146,7 +150,7 @@ export class CaptureComponent implements OnInit {
                 self.visible = true;
                 self.isSuccessVisible = false;
                 console.log("usao je zavrsnicu FAIL i success je: " +self.isSuccessVisible);
-                self.message = "Fail! RESET BOARD and try again";
+                self.message = self.fail;
                 return;
               }
               break;
@@ -173,7 +177,7 @@ export class CaptureComponent implements OnInit {
             $('#nextBtn').prop('disabled', false);
             self.isSuccessVisible = true;
             self.visible = true;
-            self.message = "Success! You are ready for NEXT step.";
+            self.message = self.success;
             console.log("usao je zavrsnicu2 SUCCESS i success je: " +self.isSuccessVisible);
             return;
           }
@@ -192,6 +196,8 @@ export class CaptureComponent implements OnInit {
     this.gameMain.firstPosition();
     this.visible = false;
     this.check = false;
+    this.fail = "";
+    this.success = "";
     this.initBoard();
   }
 
@@ -201,6 +207,8 @@ export class CaptureComponent implements OnInit {
     this.gameMain.firstPosition();
     this.visible = false;
     this.check = false;
+    this.fail = "";
+    this.success = "";
     this.initBoard();
   }
 
@@ -210,6 +218,8 @@ export class CaptureComponent implements OnInit {
     this.gameMain.firstPosition();
     this.visible = false;
     this.check = false;
+    this.fail = "";
+    this.success = "";
     this.initBoard();
   }
 
